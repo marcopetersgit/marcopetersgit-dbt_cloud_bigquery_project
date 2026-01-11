@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: mydbt_sources_biquery       # A logical name for this data source (e.g., 'stripe' or 'bigquery_public_data')
+    description: blablabla
+    database: dbt-bigquery-integration # The actual GCP Project ID
+    schema: dbt_mpepost  # The actual BigQuery Dataset name
+    tables:
+      - name: orders         # The actual table name in BigQuery
+        description: blablabla
+      - name: users
+        description: blablabla
+      - name: customers
+        description: blablabla
+      - name: payment
+        description: blablabla
+      - name: laptop_prices
+        description: blablabla
