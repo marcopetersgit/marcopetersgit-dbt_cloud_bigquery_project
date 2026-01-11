@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_orders
+    columns:
+      - name: id
+        tests:
+          - not_null # Assert that order_id is never null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['shipped', 'placed', 'retunred', 'completed']
+      - name: order_date
+        tests:
+          - not_null # Assert that order_id is never null
+
+  - name: stg_customers
+    columns:
+      - name: first_name
+        tests:
+          - not_null # Assert that order_id is never null
+      - name: last_name
+        tests:
+          - not_null # Assert that order_id is never null
+      - name: id
+        tests:
+          - not_null # Assert that order_id is never null
