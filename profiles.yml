@@ -1,0 +1,11 @@
+# ~/.dbt/profiles.yml
+dbt_cloud_bigquery_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: dbt-bigquery-integration
+      dataset: dbtproject  # <-- THIS is where your tables are!
+      schema: schema-test
+      location: US
