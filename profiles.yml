@@ -1,5 +1,5 @@
 # ~/.dbt/profiles.yml
-dbt_cloud_bigquery_project:
+bigquery_project:
   target: dev
   outputs:
     dev:
